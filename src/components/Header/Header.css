@@ -1,0 +1,14 @@
+.header {
+    padding-top: .5rem;
+    background-color: blue;
+}
+
+.site-nav {
+    background-color: orange;
+    display: flex;
+}
+
+.site-link {
+    margin: .5rem 1rem;
+    background-color: red;
+}
