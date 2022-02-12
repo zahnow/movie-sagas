@@ -1,8 +1,11 @@
 import {useHistory, useParams} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
 function MovieDetails() {
     const params = useParams();
     const history = useHistory();
+    const movies = useSelector(store => store.movies);
+    const movie = movies.find(movie => Number(movie.id) === Number(params.movieId));
 
     function handleBackButton(event) {
         history.push('/');
@@ -10,8 +13,9 @@ function MovieDetails() {
 
     return (
         <div>
-            <h1>Details Page</h1>
-            <h2>{params.movieId}</h2>
+            <h1>{movie?.title}</h1>
+            <img src={movie?.poster}/>
+            <p>{movie?.description}</p>
             <button onClick={handleBackButton}>Back</button>
         </div>
     );
