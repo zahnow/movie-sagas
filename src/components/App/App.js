@@ -1,11 +1,22 @@
+import { useEffect } from 'react';
 import {HashRouter as Router, Route} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import './App.css';
 import MovieList from '../MovieList/MovieList';
 import Header from '../Header/Header';
 import MovieDetails from '../MovieDetails/MovieDetails';
 import AddMovie from '../AddMovie/AddMovie';
+import GenresList from '../GenresList/GenresList'
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({ type: 'FETCH_MOVIES' });
+    dispatch({ type: 'FETCH_GENRES' });
+  }, []);
+
   return (
     <div className="App">
       <Router>        
@@ -21,6 +32,9 @@ function App() {
         {/* Add Movie page */}
         <Route path="/add">
           <AddMovie />
+        </Route>
+        <Route path='/genres'>
+          <GenresList />
         </Route>
       </Router>
     </div>
