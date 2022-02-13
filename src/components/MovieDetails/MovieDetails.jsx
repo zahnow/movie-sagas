@@ -14,13 +14,15 @@ function MovieDetails() {
 
     return (
         <div className='details-container'>
-            <button onClick={handleBackButton}>Back</button>
+            <div className='title-bar'>
+                <button onClick={handleBackButton}><i class="fa-solid fa-angle-left"></i> Back</button>
+                <h1>{movie?.title}</h1>
+            </div>
             <div className='details-container-grid'>
                 <div>
                     <img src={movie?.poster} />
                 </div>
                 <div>
-                    <h1>{movie?.title}</h1>
                     <ul>
                         {movie?.genre.map(genre => <li key={genre.id}><Link to={`/genres/${genre.id}`}>{genre.name}</Link></li>)}
                     </ul>

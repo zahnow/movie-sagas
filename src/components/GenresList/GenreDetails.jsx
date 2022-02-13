@@ -1,8 +1,8 @@
-import {useHistory, useParams} from 'react-router-dom';
-import {useSelector} from 'react-redux';
+import { useHistory, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import MovieCard from '../MovieList/MovieCard';
 
-function GenreDetails () {
+function GenreDetails() {
     const params = useParams();
     const history = useHistory();
     const genres = useSelector(store => store.genres);
@@ -18,12 +18,14 @@ function GenreDetails () {
     }
 
     return (
-        <div>
-            <h1>{genre?.name} Movies</h1>
+        <div className='genre-container'>
+                <button onClick={handleBackButton}><i class="fa-solid fa-angle-left"></i> Back</button>
+            <div className='title-bar'>
+                <h1>{genre?.name} Movies</h1>
+            </div>
             <div className='movies'>
                 {moviesOfGenre.map(movie => <MovieCard key={movie.id} movie={movie} />)}
             </div>
-            <button onClick={handleBackButton}>Back</button>
         </div>
     );
 }

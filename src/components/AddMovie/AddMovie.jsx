@@ -1,3 +1,4 @@
+import './AddMovie.css';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -39,30 +40,26 @@ function AddMovie() {
     }
     
     return (
-        <div>
+        <div className='add-movie-container'>
             <h1>Add Movie</h1>
             <div>
                 <form>
-                    <div>
-                        <input placeholder="Title" value={titleInput} onChange={(e)=> setTitleInput(e.target.value)} />
-                        <input placeholder="Description" value={descriptionInput} onChange={(e) => setDescriptionInput(e.target.value)} />
-                        <input placeholder="Poster" value={posterInput} onChange={(e) => setPosterInput(e.target.value)} />
-                        <select value={genreInput}  onChange={(e) => setGenreInput(e.target.value)} >
+                    <div className='input-grid'>
+                        <label for="titleInput">Title</label>
+                        <input placeholder="Title" id="titleInput" value={titleInput} onChange={(e)=> setTitleInput(e.target.value)} />
+                        <label for="descInput">Description</label>
+                        <input placeholder="Description" id='descInput' value={descriptionInput} onChange={(e) => setDescriptionInput(e.target.value)} />
+                        <label for="posterInput">Poster Path</label>
+                        <input placeholder="Poster" id='posterInput' value={posterInput} onChange={(e) => setPosterInput(e.target.value)} />
+                        <label for="genreInput">Genre</label>
+                        <select value={genreInput} index='genreInput'  onChange={(e) => setGenreInput(e.target.value)} >
                             {genres.map(genre => <option key={genre.id} value={genre.id}>{genre.name}</option>)}
                         </select>
                     </div>
-                    {/*
-                    Was considering trying to allowing adding to multiple genres 
-                    <div>
-                        {genres.map(genre =>
-                            <div key={genre.id}>
-                                <input type='checkbox' />
-                                <label>{genre.name}</label>
-                            </div>)}
-                    </div> 
-                    */}
+                    <div className='centered-buttons'>
                     <button onClick={handleCancel}>Cancel</button>
                     <button onClick={handleAddMovie}>Add</button>
+                    </div>
                 </form>
             </div>
         </div>
