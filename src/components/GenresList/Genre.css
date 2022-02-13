@@ -6,12 +6,16 @@
 .genre-card {
     cursor: pointer;
     margin: 1rem;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 5px;
     background-image: var(--gradient1);
     background-size: 400%;
 }
 
+/*  
+    Alright, this is gonna look weird, but I want to have a few gradients I cycle through on this page.
+    these nth-child selectors cycle through the gradients on every 4 cards.
+*/
 .genre-card:nth-child(4n + 1) {
     background-image: var(--gradient2);
 }

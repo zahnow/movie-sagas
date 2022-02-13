@@ -1,5 +1,6 @@
-import {useHistory, useParams} from 'react-router-dom';
-import {useSelector} from 'react-redux';
+import './MovieDetails.css';
+import { useHistory, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function MovieDetails() {
     const params = useParams();
@@ -12,14 +13,18 @@ function MovieDetails() {
     }
 
     return (
-        <div>
-            <h1>{movie?.title}</h1>
-            <ul>
-                {movie?.genre.map(genre => <li>{genre.name}</li>)}
-            </ul>
-            <img src={movie?.poster}/>
-            <p>{movie?.description}</p>
-            <button onClick={handleBackButton}>Back</button>
+        <div className='details-container'>
+            <div>
+                <img src={movie?.poster} />
+            </div>
+            <div>
+                <h1>{movie?.title}</h1>
+                <ul>
+                    {movie?.genre.map(genre => <li>{genre.name}</li>)}
+                </ul>
+                <p>{movie?.description}</p>
+                <button onClick={handleBackButton}>Back</button>
+            </div>
         </div>
     );
 }
