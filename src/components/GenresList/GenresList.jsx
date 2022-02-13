@@ -7,7 +7,7 @@ function GenresList() {
 
     return (
         <div>
-            <h1>Genres</h1>
+            <h1>All Genres</h1>
             <div className='genre-grid'>
                 {genres.map(genre => <GenreCard key={genre.id} genre={genre}/> )}
             </div>

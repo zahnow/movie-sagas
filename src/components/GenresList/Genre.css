@@ -30,6 +30,7 @@
 
 .genre-card:hover {
     animation: gradient-shift 1s forwards;
+    transform: scale(105%);
 }
 
 @keyframes gradient-shift {

@@ -8,4 +8,5 @@
 
 .movie-card:hover {
     background-color: var(--container-background-color-highlight);
+    transform: scale(105%);
 }
