@@ -7,6 +7,7 @@ function Header () {
             <h1>The Movies Saga!</h1>
             <div className="site-nav">
                 <NavLink className="site-link" to='/'>Home</NavLink>
+                <NavLink className="site-link" to='/add'>Add Movie</NavLink>
                 <NavLink className="site-link" to='/genres'>Genres</NavLink>
             </div>
         </div>
