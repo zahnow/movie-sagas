@@ -6,5 +6,33 @@
 .genre-card {
     cursor: pointer;
     margin: 1rem;
-    background-color: blueviolet;
+    padding: 1rem;
+    border-radius: 5px;
+    background-image: var(--gradient1);
+    background-size: 400%;
+}
+
+.genre-card:nth-child(4n + 1) {
+    background-image: var(--gradient2);
+}
+
+.genre-card:nth-child(4n + 2) {
+    background-image: var(--gradient3);
+}
+
+.genre-card:nth-child(4n + 3) {
+    background-image: var(--gradient4);
+}
+
+.genre-card:hover {
+    animation: gradient-shift 1s forwards;
+}
+
+@keyframes gradient-shift {
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
 }

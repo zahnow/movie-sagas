@@ -1,10 +1,9 @@
 .header {
     padding-top: .5rem;
-    background-color: blue;
 }
 
 .site-nav {
-    background-color: orange;
+    background-color: var(--container-background-color-highlight);
     display: flex;
 }
 

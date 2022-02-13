@@ -1,4 +1,11 @@
 .movie-card {
+    cursor: pointer;
     margin: 1rem;
-    background-color: blanchedalmond;
+    padding: 1rem;
+    background-color: var(--container-background-color);
+    border-radius: 5px;
+}
+
+.movie-card:hover {
+    background-color: var(--container-background-color-highlight);
 }
