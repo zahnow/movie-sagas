@@ -7,6 +7,7 @@ import Header from '../Header/Header';
 import MovieDetails from '../MovieDetails/MovieDetails';
 import AddMovie from '../AddMovie/AddMovie';
 import GenresList from '../GenresList/GenresList'
+import GenreDetails from '../GenresList/GenreDetails';
 
 function App() {
 
@@ -33,8 +34,11 @@ function App() {
         <Route path="/add">
           <AddMovie />
         </Route>
-        <Route path='/genres'>
+        <Route path='/genres' exact>
           <GenresList />
+        </Route>
+        <Route path='/genres/:genreId'>
+          <GenreDetails />
         </Route>
       </Router>
     </div>

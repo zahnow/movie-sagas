@@ -1,0 +1,10 @@
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.genre-card {
+    cursor: pointer;
+    margin: 1rem;
+    background-color: blueviolet;
+}

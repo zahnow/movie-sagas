@@ -8,7 +8,7 @@ function MovieDetails() {
     const movie = movies.find(movie => Number(movie.id) === Number(params.movieId));
 
     function handleBackButton(event) {
-        history.push('/');
+        history.goBack();
     }
 
     return (
