@@ -1,9 +1,5 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Movie List
 
 ## Description
+This is a weekend project using node, express, react, and redux to display a list of movies along with details about the movie. The list also allows you to filter by genre and add additional movies.
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
