@@ -17,10 +17,6 @@
     padding: 1rem;
 }
 
-.input-grid input {
-
-}
-
 .centered-buttons {
     display: flex;
     justify-content: space-around;
